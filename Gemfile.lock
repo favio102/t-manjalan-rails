@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: 505a667f63f217d10dc19170dc9bef07ff7ab765
+  branch: main
+  specs:
+    faker (3.2.2)
+      i18n (>= 1.8.11, < 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -70,6 +78,7 @@ GEM
     bootsnap (1.17.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    coderay (1.1.3)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     cssbundling-rails (1.3.3)
@@ -78,7 +87,14 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    diff-lcs (1.5.0)
     erubi (1.12.0)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
+    ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -118,6 +134,11 @@ GEM
     nokogiri (1.15.5-arm64-darwin)
       racc (~> 1.4)
     pg (1.5.4)
+    pry (0.14.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-rails (0.3.9)
+      pry (>= 0.10.4)
     psych (5.1.1.1)
       stringio
     puma (5.6.7)
@@ -159,6 +180,33 @@ GEM
       psych (>= 4.0.0)
     reline (0.4.1)
       io-console (~> 0.5)
+    rspec-core (3.12.2)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.6)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-rails (6.0.3)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      railties (>= 6.1)
+      rspec-core (~> 3.12)
+      rspec-expectations (~> 3.12)
+      rspec-mocks (~> 3.12)
+      rspec-support (~> 3.12)
+    rspec-support (3.12.1)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
+    shoulda-matchers (5.3.0)
+      activesupport (>= 5.2.0)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -169,7 +217,9 @@ GEM
     stimulus-rails (1.3.0)
       railties (>= 6.0.0)
     stringio (3.1.0)
+    table_print (1.5.7)
     thor (1.3.0)
+    tilt (2.3.0)
     timeout (0.4.1)
     turbo-rails (1.5.0)
       actionpack (>= 6.0.0)
@@ -194,13 +244,20 @@ DEPENDENCIES
   bootsnap
   cssbundling-rails
   debug
+  factory_bot_rails
+  faker!
   jbuilder
   jsbundling-rails
   pg (~> 1.1)
+  pry-rails
   puma (~> 5.0)
   rails (~> 7.0.8)
+  rspec-rails (~> 6.0.0)
+  sassc-rails
+  shoulda-matchers (~> 5.0)
   sprockets-rails
   stimulus-rails
+  table_print
   turbo-rails
   tzinfo-data
   web-console
